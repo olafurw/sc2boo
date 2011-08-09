@@ -1,0 +1,15 @@
+9 - Pylon
+13 - Gateway
+15 - Assimilator
+16 - Pylon
+18 - Cybernetics Core
+19 - Zealot
+22 - Pylon
+23 - Warp Gate Tech
+23 - Stalker
+27 - Stalker
+30 - Nexus
+30 - Sentry
+32 - Gateway
+33 - Pylon
+34 - Robotics Facility
