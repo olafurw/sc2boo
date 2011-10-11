@@ -3,8 +3,7 @@
 	<property name="lib.dir" value="lib" />
 
 	<path id="classpath">
-		<pathelement location="${lib.dir}/jintellitype-1.3.6.jar" />
-		<pathelement location="${lib.dir}/JIntellitype.dll" />
+		<fileset dir="${lib.dir}" includes="**/**"/>
 	</path>
 
 	<target name="clean">
@@ -13,9 +12,7 @@
 
 	<target name="compile" depends="clean">
 		<mkdir dir="build/classes" />
-		<javac srcdir="src" destdir="build/classes">
-			<classpath refid="classpath" />
-		</javac>
+		<javac srcdir="src" destdir="build/classes" classpathref="classpath" />
 	</target>
 
 	<target name="jar" depends="compile">
@@ -28,7 +25,7 @@
 		<jar destfile="build/jar/BOO.jar" basedir="build/classes">
 			<manifest>
 				<attribute name="Main-Class" value="com.cznp.boo.BOOMain" />
-				<attribute name="Class-Path" value="${lib.list}" />
+				<attribute name="Class-Path" value="lib/jintellitype-1.3.6.jar" />
 			</manifest>
 			<fileset dir=".">
 				<include name="**/${lib.dir}/**" />
